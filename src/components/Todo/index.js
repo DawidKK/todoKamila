@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Button from '../Button'
+
 export const Todo = ({ todoProps, allTodos, handleSetTodos }) => {
   const styles = todoProps.complete === true ? { color: 'red' } : null
 
@@ -17,6 +19,10 @@ export const Todo = ({ todoProps, allTodos, handleSetTodos }) => {
 
   return (
     <div id={todoProps.id} style={styles} onClick={handleClick}>
+      <Button onClick={handleClick}>jestem primary buttonem</Button>
+      <Button outline={true} onClick={handleClick}>
+        jestem outline buttonem
+      </Button>
       {todoProps.todo}
     </div>
   )
